@@ -1,0 +1,68 @@
+#api call for listing all leads
+###
+GET http://127.0.0.1:8000/api/leads/
+Accept: application/json
+Authorization: Token 672e3e20532bd78202275ffd36db7acd077286a1
+
+#api call for create lead
+###
+post http://127.0.0.1:8000/api/leads/
+Content-Type: application/json
+Authorization: Token 672e3e20532bd78202275ffd36db7acd077286a1
+
+
+{
+    "name":"technolab",
+    "email":"technolab@gmail.com",
+    "company":"TECHNOLAB",
+    "phone":"8965473215",
+    "source":"linkedin",
+    "requirement":"mobile app  development",
+    "budget":300000,
+    "notes":"develop mobile app "
+}
+
+
+#api call for fetch lead
+###
+GET http://127.0.0.1:8000/api/leads/1/
+Accept: application/json
+Authorization: Token 672e3e20532bd78202275ffd36db7acd077286a1
+
+
+#api call for update
+###
+PUT http://127.0.0.1:8000/api/leads/2/
+Content-Type: application/json
+Authorization: Token 672e3e20532bd78202275ffd36db7acd077286a1
+
+
+{
+    "name":"technolab",
+    "email":"technolab@gmail.com",
+    "company":"TECHNOLAB",
+    "phone":"875642365",
+    "source":"linkedin",
+    "requirement":"mobile app  development",
+    "budget":370000,
+    "notes":"develop mobile app "
+}
+
+
+#api call for summary
+###
+GET http://127.0.0.1:8000/api/leads/summary/
+Accept: application/json
+Authorization: Token 672e3e20532bd78202275ffd36db7acd077286a1
+
+
+
+#api call for token
+###
+POST http://127.0.0.1:8000/api/token/
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "password":"admin"
+}
